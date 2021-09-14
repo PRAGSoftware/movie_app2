@@ -92,7 +92,7 @@ class _MostRatedMovieState extends State<MostRatedMovie> {
                           },
                           icon: Icon(
                             Icons.favorite_outline,
-                            color: Colors.red,
+                            color: Colors.black,
                           ),
                         ),
                       );

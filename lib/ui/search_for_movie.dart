@@ -37,7 +37,7 @@ class _SearchViewState extends State<SearchView> {
           child:
                 BlocBuilder<SearchBloc, SearchState>(
                   builder: (context, state) {
-                    if (state is MovieLoading) {
+                    if (state is SearchLoading) {
                       return Center(
                         child: CircularProgressIndicator(),
                       );
