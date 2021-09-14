@@ -66,7 +66,7 @@ class _NowPlayingMoviesState extends State<NowPlayingMovies> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MovieDetails(
+                                  builder: (context) => MovieDetails( //passing data to movie detail screen
                                         voteAverage:
                                             movie.voteAverage.toString(),
                                         title: movie.originalTitle,
