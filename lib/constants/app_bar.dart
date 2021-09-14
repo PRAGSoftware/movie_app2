@@ -10,6 +10,8 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.teal,
       centerTitle: true,
       elevation: 0,
+
+
       title: Text(
         'Movies App'.toUpperCase(),
         style: Theme.of(context).textTheme.caption!.copyWith(
@@ -19,6 +21,8 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
               fontFamily: 'Acme',
             ),
       ),
+
+
       bottom: TabBar(
         tabs: [
           Tab(
@@ -53,6 +57,8 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
         ],
       ),
+
+
     );
   }
 

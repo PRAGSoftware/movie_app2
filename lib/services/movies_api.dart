@@ -8,13 +8,13 @@ class ApiService {
   final String baseUrl = 'https://api.themoviedb.org/3';
   final String apiKey = '11777bb8631f9365f33cee39040a7585';
   var countPage;
-
   ApiService(this.countPage);
 
 
+//fetching movies page by page "paginated"
+
   Future<List<Movie>?> getNowPlayingMovie() async {
     try {
-
       //getting number of pages
       final urlFetchPage = '$baseUrl/movie/now_playing?api_key=$apiKey';
       final responseFetched = await _dio.get(urlFetchPage);
@@ -42,6 +42,10 @@ class ApiService {
     }
   }
 
+
+
+
+
   Future<List<Movie>> getTopRatedMovie() async {
     try {
       //getting number of pages
@@ -65,6 +69,10 @@ class ApiService {
           'Exception accoured: $error with stacktrace: $stacktrace');
     }
   }
+
+
+
+
 
   Future<List<Movie>?> searchForMovie() async {
     try {

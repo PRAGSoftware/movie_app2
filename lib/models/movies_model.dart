@@ -1,5 +1,7 @@
-class Moviedetail {
-  Moviedetail({
+
+//model of getting number of pages
+class Moviedetails {
+  Moviedetails({
     required this.totalPages,
     required this.totalResults,
   });
@@ -7,7 +9,7 @@ class Moviedetail {
   late final int totalPages;
   late final int totalResults;
 
-  Moviedetail.fromJson(Map<String, dynamic> json){
+  Moviedetails.fromJson(Map<String, dynamic> json){
 
     totalPages = json['total_pages'];
     totalResults = json['total_results'];
@@ -23,6 +25,8 @@ class Moviedetail {
 }
 
 
+
+//model of getting details
 class Movie {
   Movie({
     required this.adult,
@@ -74,59 +78,4 @@ class Movie {
 
 
 
-
-
-
-//
-// class Movie {
-//   final String backdropPath;
-//   final int id;
-//   final String originalTitle;
-//   final String overview;
-//   final String title;
-//   final int voteCount;
-//   final String voteAverage;
-//   final bool adult;
-//   String error = '';
-//
-//
-//   Movie({
-//     required this.backdropPath,
-//     required this.id,
-//     required this.originalTitle,
-//     required this.overview,
-//     required this.title,
-//     required this.voteCount,
-//     required this.voteAverage,
-//     required this.adult,
-//     //required this.genreName,
-//   });
-//
-//   factory Movie.fromJson(dynamic json) {
-//     if (json == null) {
-//       return Movie(
-//         title: '',
-//         id: 0,
-//         originalTitle: '',
-//         overview: '',
-//         voteCount: 0,
-//         voteAverage: '',
-//         backdropPath: '',
-//         adult: false,
-//        // genreName: '',
-//       );
-//     }
-//
-//     return Movie(
-//       backdropPath: json['backdrop_path'],
-//       id: json['id'],
-//       originalTitle: json['original_title'],
-//       overview: json['overview'],
-//       title: json['title'],
-//       voteCount: json['vote_count'],
-//       voteAverage: json['vote_average'].toString(),
-//       adult: json['adult'],
-//    );
-//   }
-// }
 

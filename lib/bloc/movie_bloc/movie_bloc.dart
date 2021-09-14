@@ -5,7 +5,6 @@ import 'movie_bloc_event.dart';
 import 'movie_bloc_state.dart';
 
 class MovieBloc extends Bloc<MovieEvent, MovieState> {
-
   int apiCounter = 1;
 
   MovieBloc() : super(MovieLoading());
@@ -13,16 +12,18 @@ class MovieBloc extends Bloc<MovieEvent, MovieState> {
   @override
   Stream<MovieState> mapEventToState(MovieEvent event) async* {
     if (event is MovieEventStarted) {
-      yield* _mapMovieEventStateToState(event.movieId, event.query,event.pageNumber);
+      yield* _mapMovieEventStateToState(
+          event.movieId, event.query, event.pageNumber);
     }
   }
 
   Stream<MovieState> _mapMovieEventStateToState(
-      int movieId, String query,int counter) async* {
-    counter =apiCounter++;
+      int movieId, String query, int counter) async* {
+    counter = apiCounter++; //to get next page in the api request
     print(counter);
     final service = ApiService(counter);
     yield MovieLoading();
+
     try {
       List<Movie> movieList;
       print(movieId);
@@ -32,7 +33,6 @@ class MovieBloc extends Bloc<MovieEvent, MovieState> {
         //print(movieId);
         movieList = (await service.getNowPlayingMovie())!;
       }
-
       yield MovieLoaded(movieList);
     } on Exception catch (e) {
       print(e);
