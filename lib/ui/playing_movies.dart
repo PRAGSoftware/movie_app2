@@ -28,7 +28,7 @@ class _NowPlayingMoviesState extends State<NowPlayingMovies> {
     return MultiBlocProvider(
       providers: [
         BlocProvider<MovieBloc>(create: (_) {
-          return MovieBloc()..add(MovieEventStarted(0, '', counter, refresh));
+          return MovieBloc()..add(MovieEventStarted(0, '', counter, ));
         }),
       ],
       child: Scaffold(
@@ -51,7 +51,7 @@ class _NowPlayingMoviesState extends State<NowPlayingMovies> {
                   },
                   onLoading: () {
                     BlocProvider.of<MovieBloc>(context)
-                        .add(MovieEventStarted(0, '', counter, refresh));
+                        .add(MovieEventStarted(0, '', counter, ));
                     refreshController.loadComplete();
                   },
                   child: ListView.separated(

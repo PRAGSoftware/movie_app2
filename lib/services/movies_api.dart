@@ -14,6 +14,8 @@ class ApiService {
 
   Future<List<Movie>?> getNowPlayingMovie() async {
     try {
+
+      //getting number of pages
       final urlFetchPage = '$baseUrl/movie/now_playing?api_key=$apiKey';
       final responseFetched = await _dio.get(urlFetchPage);
       print(responseFetched);
@@ -42,6 +44,8 @@ class ApiService {
 
   Future<List<Movie>> getTopRatedMovie() async {
     try {
+      //getting number of pages
+
       final urlFetchPage = '$baseUrl/movie/top_rated?api_key=$apiKey';
       final responseFetched = await _dio.get(urlFetchPage);
       print(responseFetched);
@@ -64,6 +68,8 @@ class ApiService {
 
   Future<List<Movie>?> searchForMovie() async {
     try {
+      //getting number of pages
+
       final urlFetchPage = '$baseUrl/discover/movie?api_key=$apiKey';
       final responseFetched = await _dio.get(urlFetchPage);
       print(responseFetched);
