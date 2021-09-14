@@ -47,7 +47,7 @@ class _SearchViewState extends State<SearchView> {
 
                       return Column(
                         children: [
-                          TextFormField(onChanged: (value){item.where((element) => element.contains(value).toList(),);},),
+                          //TextFormField(onChanged: (value){item.where((element) => element.contains(value).toList(),);},),
 
                           Expanded(
                             child: SmartRefresher(

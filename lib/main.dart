@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: MainAppBar(),
+
           body: TabBarControllerWidget(),
         ),
       ),
