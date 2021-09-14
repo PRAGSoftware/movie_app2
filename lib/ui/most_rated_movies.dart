@@ -40,7 +40,6 @@ class _MostRatedMovieState extends State<MostRatedMovie> {
                 );
               } else if (state is MostRatedMovieLoaded) {
                 List<Movie> movies = state.mostRatedMovieList;
-                bool refresh = true;
 
                 return SmartRefresher(
                   controller: refreshController,
@@ -80,11 +79,11 @@ class _MostRatedMovieState extends State<MostRatedMovie> {
                                         : '+18',
                                   )));
                         },
-                        leading:movie.backdropPath != Null? CircleAvatar(
+                        leading: CircleAvatar(
                           child: CachedNetworkImage(
                               imageUrl: 'https://image.tmdb.org/t/p/original/${movie.backdropPath}'),
                           backgroundColor: Colors.transparent,
-                        ):Icon(Icons.error_outline),
+                        ),
                         title: Text(movie.title),
                         subtitle: Text('Vote Average:${movie.voteAverage}'),
                         trailing: IconButton(

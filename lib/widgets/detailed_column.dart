@@ -1,4 +1,5 @@
-import 'package:cached_network_image/cached_network_image.dart';
+
+//using Detailed column to build out the screen of movie details screen
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_app/constants/text_style.dart';

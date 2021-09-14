@@ -5,7 +5,6 @@ import 'package:movie_app/bloc/movie_bloc/movie_bloc_event.dart';
 import 'package:movie_app/bloc/movie_bloc/movie_bloc_state.dart';
 import 'package:movie_app/models/movies_model.dart';
 import 'package:movie_app/bloc/movie_bloc/movie_bloc.dart';
-import 'package:movie_app/services/movies_api.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'movie_details.dart';
@@ -41,7 +40,6 @@ class _NowPlayingMoviesState extends State<NowPlayingMovies> {
                 );
               } else if (state is MovieLoaded) {
                 List<Movie> movies = state.movieList;
-                bool refresh = true;
 
                 return SmartRefresher(
                   controller: refreshController,
