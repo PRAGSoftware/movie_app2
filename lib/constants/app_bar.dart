@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_app/ui/search_for_movie.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MainAppBar({Key? key}) : super(key: key);
@@ -11,19 +10,13 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.teal,
       centerTitle: true,
       elevation: 0,
-      leading: IconButton(
-        icon: Icon(
-          Icons.search,
-          color: Colors.black,
-        ),
-        onPressed: () {},
-      ),
       title: Text(
-        'Movies-App'.toUpperCase(),
+        'Movies App'.toUpperCase(),
         style: Theme.of(context).textTheme.caption!.copyWith(
-          color: Colors.white,
+              color: Colors.white,
               fontSize: 20,
               fontWeight: FontWeight.bold,
+              fontFamily: 'Acme',
             ),
       ),
       bottom: TabBar(
